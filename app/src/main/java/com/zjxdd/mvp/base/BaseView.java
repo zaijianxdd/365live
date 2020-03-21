@@ -21,5 +21,5 @@ public interface BaseView {
      * 出错回调
      *
      * */
-    void onError();
+    void onError(String message);
 }

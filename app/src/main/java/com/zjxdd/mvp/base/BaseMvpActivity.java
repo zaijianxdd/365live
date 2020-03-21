@@ -6,7 +6,7 @@ package com.zjxdd.mvp.base;
  * @author admin
  * @date 2020-03-20 11:02
  */
-public abstract class BaseMvpActivity<P extends BasePresenter,V extends BaseView> extends BaseActivity implements BaseView {
+public abstract class BaseMvpActivity<P extends BasePresenter,V extends BaseView> extends BaseActivity {
 
     private P presenter;
 
@@ -15,7 +15,7 @@ public abstract class BaseMvpActivity<P extends BasePresenter,V extends BaseView
         presenter = createPresenter();
         if (presenter!=null){
             //presenter 绑定 view
-            presenter.attachView(this);
+            presenter.attachView((BaseView) this);
         }
     }
 
