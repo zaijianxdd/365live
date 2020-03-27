@@ -1,6 +1,7 @@
 package com.zjxdd.mvp.iApiService;
 
 
+import com.zjxdd.mvp.entity.BaseEnity;
 import com.zjxdd.mvp.entity.PoetryEntity;
 
 import io.reactivex.Observable;
@@ -15,4 +16,8 @@ import retrofit2.http.GET;
 public interface IGetPoetryEntity {
     @GET("all.json")
     Observable<PoetryEntity> getPoetry();
+
+    @GET("login")
+    Observable<BaseEnity> userLogin();
 }
+

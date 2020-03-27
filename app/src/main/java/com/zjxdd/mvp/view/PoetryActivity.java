@@ -68,12 +68,6 @@ public class PoetryActivity extends BaseMvpActivity<PoetryPresenter, PoetryActiv
         Toast.makeText(MyApplication.getContext(), message, Toast.LENGTH_SHORT).show();
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
 
     @OnClick({R.id.btn_get_poetry, R.id.btn_goto_fragment})
     public void onViewClicked(View view) {
